@@ -2,6 +2,9 @@
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
 [project]
 name = "flocking-aesthetics-mcp"
 version = "0.1.0"
@@ -12,7 +15,8 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "fastmcp>=0.2.0"
+    "fastmcp>=0.2.0",
+    "numpy"
 ]
 
 [project.optional-dependencies]
